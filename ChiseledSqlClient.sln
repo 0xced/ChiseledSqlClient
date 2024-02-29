@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChiseledSqlClient", "ChiseledSqlClient\ChiseledSqlClient.csproj", "{E65D717E-0158-4D1A-90BF-9C1055023E9F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Meta", "Meta", "{A2807ACD-B67B-4167-A2C2-5B7C34108BF1}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Identity.Client", "Microsoft.Identity.Client\Microsoft.Identity.Client.csproj", "{03F5C6FA-8E70-4943-A3F3-4BD27E9BE25D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E65D717E-0158-4D1A-90BF-9C1055023E9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E65D717E-0158-4D1A-90BF-9C1055023E9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E65D717E-0158-4D1A-90BF-9C1055023E9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E65D717E-0158-4D1A-90BF-9C1055023E9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03F5C6FA-8E70-4943-A3F3-4BD27E9BE25D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03F5C6FA-8E70-4943-A3F3-4BD27E9BE25D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03F5C6FA-8E70-4943-A3F3-4BD27E9BE25D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03F5C6FA-8E70-4943-A3F3-4BD27E9BE25D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

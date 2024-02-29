@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework Condition="$([MSBuild]::IsOSPlatform('Windows'))">net8.0-windows</TargetFramework>
+    <UseCurrentRuntimeIdentifier>true</UseCurrentRuntimeIdentifier>
+    <DebugType>embedded</DebugType>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.0" />
+  </ItemGroup>
+
+  <Target Name="RemoveAzureActiveDirectory" AfterTargets="ResolvePackageAssets" Condition="$(ChiselingEnabled) == 'true'">
+    <ItemGroup>
+      <RuntimeCopyLocalItems Remove="@(RuntimeCopyLocalItems)" Condition="$([System.String]::Copy('%(RuntimeCopyLocalItems.NuGetPackageId)').StartsWith('Azure')) Or $([System.String]::Copy('%(RuntimeCopyLocalItems.NuGetPackageId)').StartsWith('Microsoft.Identity'))" />
+      <NativeCopyLocalItems Remove="@(NativeCopyLocalItems)" Condition="$([System.String]::Copy('%(NativeCopyLocalItems.NuGetPackageId)').StartsWith('Microsoft.Identity'))" />
+    </ItemGroup>
+  </Target>
+
+  <ItemGroup Condition="$(ChiselingEnabled) == 'true'">
+    <ProjectReference Include="..\Microsoft.Identity.Client\Microsoft.Identity.Client.csproj" />
+  </ItemGroup>
+
+</Project>
