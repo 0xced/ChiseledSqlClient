@@ -2,8 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
     <DebugType>None</DebugType>
     <!-- Must be same version as https://www.nuget.org/packages/Microsoft.Data.SqlClient/5.2.0#dependencies-body-tab -->
     <Version>4.56.0</Version>
