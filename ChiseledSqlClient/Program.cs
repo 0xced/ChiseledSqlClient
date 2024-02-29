@@ -1,4 +1,5 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using System.Text.RegularExpressions;
+using Microsoft.Data.SqlClient;
 
 var dlls = new DirectoryInfo(AppContext.BaseDirectory).EnumerateFiles("*.dll").Where(e => e.Name != "ChiseledSqlClient.dll").OrderByDescending(e => e.Length).ToList();
 var isChiseled = dlls.All(e => !e.Name.Contains("Azure"));
@@ -7,9 +8,10 @@ if (args.Contains("--dlls"))
 {
     Console.WriteLine($"| File {new string(' ', maxLength - 4)}| Size    |");
     Console.WriteLine($"|---{new string('-', maxLength - 4)}---|---------|");
+    var isAzureDependentRegex = new Regex(@"Azure|Microsoft\.Identity|msal|Web");
     foreach (var dll in dlls)
     {
-        var name = !isChiseled && (dll.Name.StartsWith("Azure") || dll.Name.StartsWith("Microsoft.Identity") || dll.Name.Contains("msal")) ? $"**{dll.Name}**" : dll.Name;
+        var name = !isChiseled && isAzureDependentRegex.IsMatch(dll.Name) ? $"**{dll.Name}**" : dll.Name;
         Console.WriteLine($"| {name.PadRight(maxLength)} | {dll.Length / 1_000_000.0:F2} MB |");
     }
 }

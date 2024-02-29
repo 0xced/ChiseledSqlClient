@@ -68,9 +68,9 @@ Here's the list of all the `Microsoft.Data.SqlClient` dependencies. Those in **b
 | System.Configuration.ConfigurationManager.dll           | 0.44 MB |
 | **Azure.Core.dll**                                      | 0.38 MB |
 | **Azure.Identity.dll**                                  | 0.33 MB |
-| Microsoft.Web.WebView2.Core.dll                         | 0.22 MB |
+| **Microsoft.Web.WebView2.Core.dll**                     | 0.22 MB |
 | System.Diagnostics.EventLog.dll                         | 0.17 MB |
-| WebView2Loader.dll                                      | 0.14 MB |
+| **WebView2Loader.dll**                                  | 0.14 MB |
 | **Microsoft.IdentityModel.Protocols.OpenIdConnect.dll** | 0.11 MB |
 | **Microsoft.IdentityModel.JsonWebTokens.dll**           | 0.11 MB |
 | System.Runtime.Caching.dll                              | 0.09 MB |
@@ -79,9 +79,9 @@ Here's the list of all the `Microsoft.Data.SqlClient` dependencies. Those in **b
 | **Microsoft.Identity.Client.Extensions.Msal.dll**       | 0.07 MB |
 | **Microsoft.IdentityModel.Protocols.dll**               | 0.04 MB |
 | **Microsoft.IdentityModel.Logging.dll**                 | 0.04 MB |
-| Microsoft.Web.WebView2.Wpf.dll                          | 0.04 MB |
+| **Microsoft.Web.WebView2.Wpf.dll**                      | 0.04 MB |
 | System.Security.Cryptography.ProtectedData.dll          | 0.04 MB |
-| Microsoft.Web.WebView2.WinForms.dll                     | 0.03 MB |
+| **Microsoft.Web.WebView2.WinForms.dll**                 | 0.03 MB |
 | Microsoft.SqlServer.Server.dll                          | 0.02 MB |
 | System.Memory.Data.dll                                  | 0.02 MB |
 | **Microsoft.IdentityModel.Abstractions.dll**            | 0.02 MB |
