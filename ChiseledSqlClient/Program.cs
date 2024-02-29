@@ -23,7 +23,7 @@ await using var command = dataSource.CreateCommand("Select @@version");
 try
 {
     var result = await command.ExecuteScalarAsync();
-    Console.WriteLine($"✔️ {result}");
+    Console.WriteLine($"✅ {result}");
     return 0;
 }
 catch (Exception exception)

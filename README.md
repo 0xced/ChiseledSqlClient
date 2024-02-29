@@ -39,7 +39,7 @@ With all the Azure and MSAL libraries, the total DLL size is **9.5** MB.
 ```
 dotnet run
 Total DLL size: 9.5 MB
-✔️ Microsoft SQL Azure (RTM) - 12.0.2000.8
+✅ Microsoft SQL Azure (RTM) - 12.0.2000.8
         Feb  2 2024 04:20:23
         Copyright (C) 2022 Microsoft Corporation
 ```
@@ -49,7 +49,7 @@ Without all the Azure and MSAL libraries, the total DLL size is **4.3** MB, less
 ```
 dotnet run -p:ChiselingEnabled=true
 Total DLL size: 4.3 MB
-✔️ Microsoft SQL Azure (RTM) - 12.0.2000.8
+✅ Microsoft SQL Azure (RTM) - 12.0.2000.8
         Feb  2 2024 04:20:23
         Copyright (C) 2022 Microsoft Corporation
 ```
