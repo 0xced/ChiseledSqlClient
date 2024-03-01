@@ -2,9 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
+    <PackageId>Chiseled.Microsoft.Identity.Client</PackageId>
     <DebugType>None</DebugType>
-    <!-- Must be same version as https://www.nuget.org/packages/Microsoft.Data.SqlClient/5.2.0#dependencies-body-tab -->
-    <Version>4.56.0</Version>
+    <!-- Must be above version at https://www.nuget.org/packages/Microsoft.Data.SqlClient/5.2.0#dependencies-body-tab -->
+    <Version>100.0.0</Version>
   </PropertyGroup>
 
 </Project>

@@ -16,13 +16,13 @@
 
   <Target Name="RemoveAzureActiveDirectory" AfterTargets="ResolvePackageAssets" Condition="$(ChiselingEnabled) == 'true'">
     <ItemGroup>
-      <RuntimeCopyLocalItems Remove="@(RuntimeCopyLocalItems)" Condition="$([System.String]::Copy('%(RuntimeCopyLocalItems.NuGetPackageId)').StartsWith('Azure')) Or $([System.String]::Copy('%(RuntimeCopyLocalItems.NuGetPackageId)').StartsWith('Microsoft.Identity'))" />
+      <RuntimeCopyLocalItems Remove="@(RuntimeCopyLocalItems)" Condition="$([System.String]::Copy('%(RuntimeCopyLocalItems.NuGetPackageId)').StartsWith('Azure')) Or ($([System.String]::Copy('%(RuntimeCopyLocalItems.NuGetPackageId)').StartsWith('Microsoft.Identity')) And !$([System.String]::Copy('%(RuntimeCopyLocalItems.NuGetPackageId)').Equals('Microsoft.Identity.Client')))" />
       <NativeCopyLocalItems Remove="@(NativeCopyLocalItems)" Condition="$([System.String]::Copy('%(NativeCopyLocalItems.NuGetPackageId)').StartsWith('Microsoft.Identity'))" />
     </ItemGroup>
   </Target>
 
   <ItemGroup Condition="$(ChiselingEnabled) == 'true'">
-    <ProjectReference Include="..\Microsoft.Identity.Client\Microsoft.Identity.Client.csproj" />
+    <PackageReference Include="Chiseled.Microsoft.Identity.Client" Version="100.0.0" />
   </ItemGroup>
 
 </Project>
