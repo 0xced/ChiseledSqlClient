@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Meta", "Meta", "{A2807ACD-B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Identity.Client", "Microsoft.Identity.Client\Microsoft.Identity.Client.csproj", "{03F5C6FA-8E70-4943-A3F3-4BD27E9BE25D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "System.Configuration.ConfigurationManager", "System.Configuration.ConfigurationManager\System.Configuration.ConfigurationManager.csproj", "{8BA2C8E9-283A-4A56-99C2-6DB261D04838}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,5 +25,9 @@ Global
 		{03F5C6FA-8E70-4943-A3F3-4BD27E9BE25D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03F5C6FA-8E70-4943-A3F3-4BD27E9BE25D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03F5C6FA-8E70-4943-A3F3-4BD27E9BE25D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BA2C8E9-283A-4A56-99C2-6DB261D04838}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BA2C8E9-283A-4A56-99C2-6DB261D04838}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BA2C8E9-283A-4A56-99C2-6DB261D04838}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BA2C8E9-283A-4A56-99C2-6DB261D04838}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

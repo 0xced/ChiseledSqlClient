@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>System.Configuration</RootNamespace>
+    <DebugType>none</DebugType>
+    <Version Condition="$(Version) == ''">99.0.0</Version>
+  </PropertyGroup>
+
+</Project>
