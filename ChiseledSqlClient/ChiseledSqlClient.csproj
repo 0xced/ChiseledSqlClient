@@ -14,15 +14,18 @@
     <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.0" />
   </ItemGroup>
 
+  <ItemGroup Condition="$(ChiselingEnabled) == 'true'">
+    <ProjectReference Include="..\Microsoft.Identity.Client\Microsoft.Identity.Client.csproj">
+      <!-- Use the same version as https://www.nuget.org/packages/Microsoft.Data.SqlClient/5.2.0#dependencies-body-tab -->
+      <Properties>Version=4.56.0</Properties>
+    </ProjectReference>
+  </ItemGroup>
+
   <Target Name="RemoveAzureActiveDirectory" AfterTargets="ResolvePackageAssets" Condition="$(ChiselingEnabled) == 'true'">
     <ItemGroup>
       <RuntimeCopyLocalItems Remove="@(RuntimeCopyLocalItems)" Condition="$([System.String]::Copy('%(RuntimeCopyLocalItems.NuGetPackageId)').StartsWith('Azure')) Or $([System.String]::Copy('%(RuntimeCopyLocalItems.NuGetPackageId)').StartsWith('Microsoft.Identity'))" />
       <NativeCopyLocalItems Remove="@(NativeCopyLocalItems)" Condition="$([System.String]::Copy('%(NativeCopyLocalItems.NuGetPackageId)').StartsWith('Microsoft.Identity'))" />
     </ItemGroup>
   </Target>
-
-  <ItemGroup Condition="$(ChiselingEnabled) == 'true'">
-    <ProjectReference Include="..\Microsoft.Identity.Client\Microsoft.Identity.Client.csproj" />
-  </ItemGroup>
 
 </Project>

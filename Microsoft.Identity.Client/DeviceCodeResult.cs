@@ -1,3 +1,6 @@
-﻿namespace Microsoft.Identity.Client;
-
-public class DeviceCodeResult;
+﻿namespace Microsoft.Identity.Client
+{
+    public class DeviceCodeResult
+    {
+    }
+}

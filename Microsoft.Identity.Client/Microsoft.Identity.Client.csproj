@@ -1,10 +1,8 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <DebugType>None</DebugType>
-    <!-- Must be same version as https://www.nuget.org/packages/Microsoft.Data.SqlClient/5.2.0#dependencies-body-tab -->
-    <Version>4.56.0</Version>
+    <DebugType>none</DebugType>
   </PropertyGroup>
 
 </Project>
