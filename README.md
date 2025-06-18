@@ -1,5 +1,10 @@
 # ChiseledSqlClient
 
+> [!IMPORTANT]  
+> ChiseledSqlClient was an experiment that eventually lead to [Chisel](https://github.com/0xced/Chisel), a NuGet package which greatly simplifies the removal of unwanted dependencies and properly handles transitive dependencies.
+
+---
+
 As of version 5.2.0, the [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient) NuGet package includes everything needed to authenticate to SQL databases with the Microsoft identity platform (formerly Azure AD). It has been suggested to [split Azure dependent functionality in a separate NuGet Package (#1108)](https://github.com/dotnet/SqlClient/issues/1108) but currently all the Azure and [Microsoft Authentication Library (MSAL)](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet) packages are required dependencies.
 
 So if you only use authentication with user/password or SSPI integrated security you have to pay for the weight of all those unused libraries. 
